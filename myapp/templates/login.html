@@ -1,0 +1,19 @@
+
+<style>
+    .login{
+    background-color: #d63384;
+        height: 30vh;
+        width: 500px;
+        align-content: center;
+        text-align: center;
+}
+</style>
+<div class="login">
+    <h1>Login</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+    <a href="{% url 'signup' %}">Dont have Account Create</a>
+</form>
+</div>
